@@ -2,6 +2,7 @@
 <project version="4">
     <component name="JavaScriptLibraryMappings">
         <excludedPredefinedLibrary name="server/node_modules"/>
+        <excludedPredefinedLibrary name="mybox/node_modules"/>
         <includedPredefinedLibrary name="ECMAScript 6"/>
         <includedPredefinedLibrary name="Node.js Core"/>
         <file url="PROJECT" libraries="{node-DefinitelyTyped,mocha-DefinitelyTyped}"/>
