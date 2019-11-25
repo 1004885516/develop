@@ -7,7 +7,7 @@
     "egg": "^2.2.1",
     "egg-cors": "^2.1.0",
     "egg-mongoose": "^3.1.0",
-    "egg-scripts": "^2.5.0",
+    "egg-scripts": "^2.8.1",
     "egg-static": "^2.1.1",
     "egg-validate": "^1.0.0",
     "jsonwebtoken": "^8.5.1",
