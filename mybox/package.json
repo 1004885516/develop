@@ -11,7 +11,7 @@
     "egg-static": "^2.1.1",
     "egg-validate": "^1.0.0",
     "jsonwebtoken": "^8.5.1",
-    "npm": "^6.13.1"
+    "npm": "^6.13.4"
   },
   "devDependencies": {
     "autod": "^3.0.1",
