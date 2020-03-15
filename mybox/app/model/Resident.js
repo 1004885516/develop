@@ -17,6 +17,8 @@ module.exports = app => {
     day14: {type: String},      // 是否14天
     outtime: {type: Date},     // 出行时间
     times: {type: Number},      // 出行次数
+    user_card: {trpe: String, required: true, unique : true}, // 身份证
+    door_code: {trpe: String, required: true, unique : true}, // 门牌号
     createTime: { type: Date, default: Date.now }, // 创建时间
   });
 
