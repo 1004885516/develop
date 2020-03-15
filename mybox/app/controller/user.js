@@ -40,7 +40,7 @@ class user extends Controller{
   // 小区录入
   async addEstate(){
     const {ctx} = this
-    if(ctx.request.body.username === null){
+    if(!ctx.request.body.estate[0]){
       return ctx.helper.returnerr({ctx, msg:'参数为空'});
     }
     const result = await ctx.service.estate.add(ctx.request.body.estate);
@@ -115,8 +115,7 @@ class user extends Controller{
     // 验证参数
     const createRule = {
       username: {type: 'string', required: true},
-      pwd:{type:'string', required:true},
-      estate_id:{type:'string', required:true}
+      pwd:{type:'string', required:true}
     };
     // 校验参数
     ctx.validate(createRule);
