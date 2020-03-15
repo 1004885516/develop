@@ -6,7 +6,7 @@ module.exports = app => {
   const mongoose = app.mongoose;
 
   const userSchema = new mongoose.Schema({
-    username:{type:String, required: true},
+    username:{type:String, required: true, unique : true},
     pwd:{type: String},
     estate_id:{type: String},
     createTime: { type: Date, default: Date.now }, // 创建时间

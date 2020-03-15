@@ -138,7 +138,10 @@ class user extends Controller{
       return ctx.helper.returnerr({ctx, msg:'密码错误'});
     }
     const token = jwt.sign(ctx.request.body, app.config.token_key);
-    let result = {token:token}
+    let result = {
+      token:token,
+      user:user
+    };
     if( ctx.request.body.username === 'SuperAdmin'){
       result['type'] = 1
     }
