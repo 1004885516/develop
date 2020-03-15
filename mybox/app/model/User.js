@@ -8,7 +8,7 @@ module.exports = app => {
   const userSchema = new mongoose.Schema({
     username:{type:String, required: true},
     pwd:{type: String},
-
+    estate_id:{type: String},
     createTime: { type: Date, default: Date.now }, // 创建时间
   });
 

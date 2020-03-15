@@ -111,31 +111,28 @@ class user extends Controller{
   }
   // 登录接口
   async login(){
-    const {ctx} = this;
+    const {ctx, app} = this;
     // 验证参数
     const createRule = {
       username: {type: 'string', required: true},
-      pwd:{type:'string', required:true}
+      pwd:{type:'string', required:true},
+      estate_id:{type:'string', required:true}
     };
     // 校验参数
     ctx.validate(createRule);
     const user = await ctx.service.user.getOne({username:ctx.request.body.username})
     if(!user){
-      ctx.throw(404, '该用户未注册');
+      return ctx.helper.returnerr({ctx, msg:'该用户未注册'});
     }
     if(ctx.request.body.pwd !== user.pwd ){
-      ctx.throw(404, '密码错误');
+      return ctx.helper.returnerr({ctx, msg:'密码错误'});
     }
-    const token = jwt.sign(ctx.request.body.username, app.config.token_key);
-    ctx.helper.success({ ctx, res: token });
-  }
-  async getToken(){
-    const { ctx, app } = this
-    if (!ctx.request.body.phone) {
-      ctx.throw(404, '必须填写手机号');
+    const token = jwt.sign(ctx.request.body, app.config.token_key);
+    let result = {token:token}
+    if( ctx.request.body.username === 'SuperAdmin'){
+      result['type'] = 1
     }
-    const token = jwt.sign(ctx.request.body.phone,app.config.token_key)
-    ctx.helper.success({ ctx, res: token });
+    ctx.helper.success({ ctx, res: result});
   }
   // 添加
   async addVerifyCode (){

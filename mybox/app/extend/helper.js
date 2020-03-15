@@ -2,11 +2,10 @@
 // 处理成功响应
 exports.success = ({ ctx, res = {}, status = 'success' }) => {
   ctx.body = {
-    code: 0,
+    code: 200,
     data: res,
     status,
   };
-  ctx.status = 200;
   if (ctx.app.config.env !== 'prod') {
     console.log('============================token===============================');
     console.log(ctx.decoded);
@@ -19,11 +18,10 @@ exports.success = ({ ctx, res = {}, status = 'success' }) => {
 
 exports.returnerr = ({ ctx, msg = {}, status = '' }) => {
   ctx.body = {
-    code: 0,
+    code: 500,
     msg: msg,
     status,
   };
-  ctx.status = 200;
   if (ctx.app.config.env !== 'prod') {
     console.log('============================response============================');
     console.log(ctx.body);

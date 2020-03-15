@@ -25,8 +25,5 @@ module.exports = app => {
 
 
 
-
-
-  router.post('/getToken', controller.user.getToken);
   router.post('/addVerifyCode',controller.user.addVerifyCode);
 };
