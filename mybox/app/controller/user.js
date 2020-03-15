@@ -30,11 +30,22 @@ class user extends Controller{
   // 修改管理员密码
   async setPwd(){
     const {ctx} = this
+    // 验证参数
+    const createRule = {
+      username: {type: 'string', required: true},
+      pwd:{type:'string', required:true},
+      newpwd:{type:'string', required:true}
+    };
+    // 校验参数
+    ctx.validate(createRule);
     const user = await ctx.service.user.getOne({username:ctx.request.body.username})
     if(!user){
       return ctx.helper.returnerr({ctx, msg:'该用户未注册'});
     }
-    const result = await ctx.service.user.setPwd({username: ctx.request.body.username},{$set:{pwd:ctx.request.body.pwd}});
+    if(ctx.request.body.pwd !== user.pwd){
+      return ctx.helper.returnerr({ctx, msg:'旧密码错误'});
+    }
+    const result = await ctx.service.user.setPwd({username: ctx.request.body.username},{$set:{pwd:ctx.request.body.newpwd}});
     ctx.helper.success({ ctx, res: result });
   }
   // 小区录入
