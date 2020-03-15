@@ -17,6 +17,19 @@ exports.success = ({ ctx, res = {}, status = 'success' }) => {
   }
 };
 
+exports.returnerr = ({ ctx, msg = {}, status = '' }) => {
+  ctx.body = {
+    code: 0,
+    msg: msg,
+    status,
+  };
+  ctx.status = 200;
+  if (ctx.app.config.env !== 'prod') {
+    console.log('============================response============================');
+    console.log(ctx.body);
+  }
+};
+
 exports.clone = data => {
   return JSON.parse(JSON.stringify(data));
 };

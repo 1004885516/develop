@@ -26,20 +26,26 @@ module.exports = appInfo => {
   };
   config.verify_codes_resend = 20 * 1000; // 验证码重发时间
   config.verify_codes = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ];
-  config.token_key = 'asdrdcvtuhjerwsd13sd65rfg331235fgSDsd'
+  config.token_key = 'asdrdcvtuhjerwsd13sd65rfg331235fgSDsd';
   config.mongoose = {
-    url: 'mongodb://127.0.0.1:27017/subject',
+    url: 'mongodb://47.92.118.197:27017/epidemic',
     options: {
       autoReconnect: true,
       reconnectTries: Number.MAX_VALUE,
       bufferMaxEntries: 0,
     },
-  }
+  };
   config.page = {
     entry_per_page: 10,
     entry_page: 5,
   };
   // add your config here
   config.middleware = [];
+  config.cluster = {
+    listen: {
+      hostname: '0.0.0.0',
+      port: 7001,
+    },
+  };
   return config;
 };

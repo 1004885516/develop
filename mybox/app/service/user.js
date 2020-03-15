@@ -8,11 +8,21 @@ const Service = require('egg').Service;
 class user extends Service {
   async getOne(data) {
     return await this.ctx.model.User
-      .findOne(data.find)
+      .findOne(data)
       .select(data.select || {})
       .exec();
   }
-
+  async getList(data) {
+    return await this.ctx.model.User
+        .find(data)
+        .select(data.select || {})
+        .exec();
+  }
+  async setPwd(query, option) {
+    return await this.ctx.model.User
+        .update(query,option || {multi: true})
+        .exec();
+  }
   async add(data) {
     return await this.ctx.model.User.create(data);
   }
