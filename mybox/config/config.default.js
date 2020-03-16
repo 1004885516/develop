@@ -1,5 +1,5 @@
 'use strict';
-
+const path = require('path');
 module.exports = appInfo => {
   const config = exports = {};
 
@@ -47,5 +47,8 @@ module.exports = appInfo => {
       port: 7001,
     },
   };
+  config.assets = {
+    publicPath: '/public/',
+  }
   return config;
 };

@@ -10,6 +10,9 @@ module.exports = app => {
   router.post('/add', controller.detail.addNew);
 
 
+  router.get('/', controller.home.index);
+
+
 
 
   router.post('/addAdmin', controller.user.addAdmin);           // 添加管理员

@@ -16,3 +16,12 @@ exports.validate = {
   enable: true,
   package: 'egg-validate',
 };
+// 视图
+exports.nunjucks = {
+  enable: true,
+  package: 'egg-view-nunjucks',
+};
+
+exports.static = {
+  enable: true
+};
