@@ -16,12 +16,7 @@ exports.validate = {
   enable: true,
   package: 'egg-validate',
 };
-// 视图
-exports.nunjucks = {
-  enable: true,
-  package: 'egg-view-nunjucks',
-};
-
+// 静态文件public开关
 exports.static = {
   enable: true
 };
