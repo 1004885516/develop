@@ -19,7 +19,8 @@ module.exports = app => {
     times: {type: Number},      // 出行次数
     user_card: {type: String, required: true, unique : true}, // 身份证
     door_code: {type: String, required: true, unique : true}, // 门牌号
-    uuid: {type: String, required: true, unique : true},      // 用户微信id
+    openid: {type: String, required: true, unique : true},      // 用户微信id
+    affirm: {type: String, default: 'false'},     // 是否已被管理员确认    true 为已确认
     createTime: { type: Date, default: Date.now }, // 创建时间
   });
 

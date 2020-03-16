@@ -67,14 +67,44 @@ class user extends Controller{
   async addResidentr(){
     const {ctx} = this;
     const body = ctx.request.body.data;
-    const user = await ctx.service.resident.getOne({phone:body.phone});
+    const user = await ctx.service.resident.getOne({phone:body.openIde});
     if(user !== null){
       return ctx.helper.returnerr({ctx, msg:'该用户已注册'});
     }
     body['outtime'] = new Date();     // 出行时间
-    body['times'] = 0;                // 出行次数
+    body['times'] = 1;                // 出行次数
     const result = await ctx.service.resident.add(body);
     ctx.helper.success({ ctx, res: result });
+  }
+  // 验证居民是否注册
+  async verifyUser(){
+    const {ctx} = this;
+    const body = ctx.request.body;
+    const user = await ctx.service.resident.getOne({openid:body.openid});
+    if(user !== null){
+      return ctx.helper.returnerr({ctx, msg:'该用户已注册'});
+    }
+    ctx.helper.success({ ctx, res: user });
+  }
+  // 管理员审核
+  async affirmUser(){
+    const {ctx} = this;
+    const body = ctx.request.body;
+    // 验证参数
+    if(!body.openIdes[0]){
+      return ctx.helper.returnerr({ctx, msg:'未勾选'});
+    }
+    for(const item of body.openIdes){
+      let user = await ctx.service.resident.getOne({openid:item});
+      if(user === null){
+        return ctx.helper.returnerr({ctx, msg: item +'该用户未注册:'});
+      }
+      if(user.affirm === 'true'){
+        return ctx.helper.returnerr({ctx, msg:user.name + '该用户已确认过'});
+      }
+      await ctx.service.resident.setAffirm({openid:item},{$set:{affirm:'true'}});
+    }
+    ctx.helper.success({ ctx, res: {result:'确认成功'} });
   }
   // 用过code获取微信openIde
   async wxgetOpenId(){
@@ -137,8 +167,7 @@ class user extends Controller{
     }
     const token = jwt.sign(ctx.request.body, app.config.token_key);
     let result = {
-      token:token,
-      user:user
+      token:token
     };
     if( ctx.request.body.username === 'SuperAdmin'){
       result['type'] = 1

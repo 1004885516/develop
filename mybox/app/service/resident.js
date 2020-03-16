@@ -18,7 +18,7 @@ class resident extends Service {
             .select(data.select || {})
             .exec();
     }
-    async setPwd(query, option) {
+    async setAffirm(query, option) {
         return await this.ctx.model.Resident
             .update(query,option || {multi: true})
             .exec();
