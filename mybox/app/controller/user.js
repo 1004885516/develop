@@ -83,13 +83,11 @@ class user extends Controller{
       return ctx.helper.returnerr({ctx, msg:'js_code是必须的'});
     }
     const jscode = ctx.request.body.js_code;
-    const data=req.body
+    const data=req.body;
     const APP_URL='auth.code2Session';
-    const APP_ID='wxXXXXXXXXX'   //小程序的app id ，在公众开发者后台可以看到
-    const APP_SECRET='8ad6f0XXXXXXXXXXXX'  //程序的app secrect，在公众开发者后台可以看到
+    const APP_ID='wx3f998363efdb0fff ';   //小程序的app id ，在公众开发者后台可以看到
+    const APP_SECRET='b502644e2b50bcba08fec197712164c6'  //程序的app secrect，在公众开发者后台可以看到
     request(`${APP_URL}?appid=${APP_ID}&secret=${APP_SECRET}&js_code=${data.js_code}&grant_type=authorization_code`, (error, response, body)=>{
-      console.log('statusCode:', response && response.statusCode)
-      console.log(body);
       res.end(body)});
     const result = await ctx.service.user.add(obj);
     ctx.helper.success({ ctx, res: result });

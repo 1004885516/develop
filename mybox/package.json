@@ -10,6 +10,7 @@
     "egg-scripts": "^2.5.0",
     "egg-static": "^2.1.1",
     "egg-validate": "^1.0.0",
+    "egg-view-nunjucks": "^2.2.0",
     "formidable": "^1.2.2",
     "jsonwebtoken": "^8.5.1",
     "mz-modules": "^2.1.0",
