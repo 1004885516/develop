@@ -2,7 +2,7 @@
 const Controller = require('egg').Controller;
 const jwt = require('jsonwebtoken');
 //处理node request请求
-const request = require('request');
+const request = require('request-promise');
 const fs = require('fs');
 /* formidable用于解析表单数据，特别是文件上传 */
 const formidable = require('formidable');
@@ -107,20 +107,23 @@ class user extends Controller{
     ctx.helper.success({ ctx, res: {result:'确认成功'} });
   }
   // 用过code获取微信openIde
+  /*
+    这里由于需要获取到request的异步请求结果，所以必须要引入request-promise包
+    request太陈旧,无法结合async和await使用
+   */
   async wxgetOpenId(){
-    const {ctx} = this
+    const {ctx} = this;
     if(!ctx.request.body.js_code){
       return ctx.helper.returnerr({ctx, msg:'js_code是必须的'});
     }
-    const jscode = ctx.request.body.js_code;
-    const data=req.body;
-    const APP_URL='auth.code2Session';
-    const APP_ID='wx3f998363efdb0fff ';   //小程序的app id ，在公众开发者后台可以看到
-    const APP_SECRET='b502644e2b50bcba08fec197712164c6'  //程序的app secrect，在公众开发者后台可以看到
-    request(`${APP_URL}?appid=${APP_ID}&secret=${APP_SECRET}&js_code=${data.js_code}&grant_type=authorization_code`, (error, response, body)=>{
-      res.end(body)});
-    const result = await ctx.service.user.add(obj);
-    ctx.helper.success({ ctx, res: result });
+    const data=ctx.request.body;
+    const APP_URL="https://api.weixin.qq.com/sns/jscode2session";
+    const APP_ID='wxa9806a9cf5d0cda1';   //小程序的app id ，在公众开发者后台可以看到
+    const APP_SECRET='b2115e207fca596b8d043a344554d94c';  //程序的app secrect，在公众开发者后台可以看到
+    await request(`${APP_URL}?appid=${APP_ID}&secret=${APP_SECRET}&js_code=${data.js_code}&grant_type=authorization_code`, (error, response, body)=>{
+      ctx.body = body;
+    });
+    ctx.helper.success({ ctx, res: ctx.body });
   }
   // 上传凭证图片
   async uploadMsg(){
@@ -167,7 +170,8 @@ class user extends Controller{
     }
     const token = jwt.sign(ctx.request.body, app.config.token_key);
     let result = {
-      token:token
+      token:token,
+      user:user
     };
     if( ctx.request.body.username === 'SuperAdmin'){
       result['type'] = 1

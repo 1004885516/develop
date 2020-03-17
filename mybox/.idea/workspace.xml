@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08baf643-2628-4423-8c69-c8079e95433d" name="Default" comment="" />
+    <list default="true" id="08baf643-2628-4423-8c69-c8079e95433d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/coverage/" />
     <ignored path="$PROJECT_DIR$/logs/" />
@@ -15,7 +20,58 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="28" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controller/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="113" column="22" lean-forward="true" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
+              <folding>
+                <element signature="n#!!block;n#addAdmin#0;n#user#0" />
+                <element signature="n#!!block;n#setPwd#0;n#user#0" />
+                <element signature="n#!!block;n#addEstate#0;n#user#0" />
+                <element signature="n#!!block;n#getAllEstate#0;n#user#0" />
+                <element signature="n#!!block;n#addResidentr#0;n#user#0" />
+                <element signature="n#!!block;n#affirmUser#0;n#user#0" />
+                <element signature="n#!!block;n#uploadMsg#0;n#user#0" />
+                <element signature="n#!!block;n#getResidents#0;n#user#0" />
+                <element signature="n#!!block;n#login#0;n#user#0" />
+                <element signature="n#!!block;n#addVerifyCode#0;n#user#0" />
+                <element signature="n#!!block;n#getUserOne#0;n#user#0" />
+                <element signature="n#!!block;n#getUserList#0;n#user#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/extend/helper.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/model/Resident.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="10" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -38,6 +94,7 @@
       <find>script</find>
       <find>exists</find>
       <find>entry_per_page</find>
+      <find>set</find>
     </findStrings>
     <dirStrings>
       <dir>D:\mybox\code\server</dir>
@@ -59,27 +116,30 @@
         <option value="$PROJECT_DIR$/app/model/user.js" />
         <option value="$PROJECT_DIR$/app/model/verifyCode.js" />
         <option value="$PROJECT_DIR$/app/model/Javascript.js" />
-        <option value="$PROJECT_DIR$/app/service/user.js" />
         <option value="$PROJECT_DIR$/config/plugin.js" />
         <option value="$PROJECT_DIR$/app/service/code.js" />
         <option value="$PROJECT_DIR$/app/middleware/verifyUser.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/config/config.prod.js" />
         <option value="$PROJECT_DIR$/app/model/User.js" />
-        <option value="$PROJECT_DIR$/app/controller/user.js" />
         <option value="$PROJECT_DIR$/config/config.default.js" />
-        <option value="$PROJECT_DIR$/app/router.js" />
         <option value="$PROJECT_DIR$/app/service/detail.js" />
         <option value="$PROJECT_DIR$/app/public/index.html" />
         <option value="$PROJECT_DIR$/app/controller/detail.js" />
+        <option value="$PROJECT_DIR$/../../../other.js" />
+        <option value="$PROJECT_DIR$/app/router.js" />
+        <option value="$PROJECT_DIR$/app/service/resident.js" />
+        <option value="$PROJECT_DIR$/app/model/Resident.js" />
+        <option value="$PROJECT_DIR$/app/service/user.js" />
+        <option value="$PROJECT_DIR$/app/extend/helper.js" />
+        <option value="$PROJECT_DIR$/app/controller/user.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="x" value="-8" />
+    <option name="width" value="1026" />
+    <option name="height" value="546" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -100,6 +160,35 @@
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
+            <path>
+              <item name="mybox" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="controller" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="mybox" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="extend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="mybox" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="model" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="mybox" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="service" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="mybox" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -108,7 +197,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/server/rsc_cppcc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../other.js" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -132,6 +221,16 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="other.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/../../../other.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.other.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -153,30 +252,41 @@
       <workItem from="1533777048766" duration="7184000" />
       <workItem from="1533864477177" duration="8083000" />
       <workItem from="1583978978703" duration="134000" />
+      <workItem from="1584408817130" duration="8288000" />
     </task>
+    <task id="LOCAL-00001" summary="管理员你审核接口，验证居民是否注册接口">
+      <created>1584361690245</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584361690245</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77674000" />
+    <option name="totallyTimeSpent" value="103138000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18080357" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.17410715" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5400982" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.2777778" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.27659574" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -185,26 +295,23 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="管理员你审核接口，验证居民是否注册接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="管理员你审核接口，验证居民是否注册接口" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controller/home.js" />
+    <entry file="file://$PROJECT_DIR$/app/controller/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/model/JavaScript" />
     <entry file="file://$PROJECT_DIR$/run/agent_config_meta.json" />
     <entry file="file://$PROJECT_DIR$/run/application_config.json" />
     <entry file="file://$PROJECT_DIR$/run/agent_config.json" />
-    <entry file="file://$PROJECT_DIR$/app/extend/helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/Javascript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="12" column="50" lean-forward="true" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/Javascript.js" />
     <entry file="file://$PROJECT_DIR$/app/model/VerifyCode.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -236,51 +343,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/service/code.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/service/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/service/code.js" />
     <entry file="file://$PROJECT_DIR$/app/public/app.8dfb6899.js" />
-    <entry file="file://$PROJECT_DIR$/config/plugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/public/app.f01979cd.js" />
     <entry file="file://$PROJECT_DIR$/app/public/app.c0d7f642.js" />
-    <entry file="file://$PROJECT_DIR$/app/controller/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
-          <folding>
-            <element signature="n#!!block;n#login#0;n#user#0" />
-            <element signature="n#!!block;n#getToken#0;n#user#0" />
-            <element signature="n#!!block;n#addVerifyCode#0;n#user#0" />
-            <element signature="n#!!block;n#getUser#0;n#user#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/public/app.3af397ad.js" />
-    <entry file="file://$PROJECT_DIR$/app/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -295,9 +362,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/app.57d6d603.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/app.57d6d603.js" />
     <entry file="file://$PROJECT_DIR$/config/config.default.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -309,6 +374,76 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../other.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="37" column="37" lean-forward="true" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/plugin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/service/resident.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/Resident.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/service/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/extend/helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="113" column="22" lean-forward="true" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
+          <folding>
+            <element signature="n#!!block;n#addAdmin#0;n#user#0" />
+            <element signature="n#!!block;n#setPwd#0;n#user#0" />
+            <element signature="n#!!block;n#addEstate#0;n#user#0" />
+            <element signature="n#!!block;n#getAllEstate#0;n#user#0" />
+            <element signature="n#!!block;n#addResidentr#0;n#user#0" />
+            <element signature="n#!!block;n#affirmUser#0;n#user#0" />
+            <element signature="n#!!block;n#uploadMsg#0;n#user#0" />
+            <element signature="n#!!block;n#getResidents#0;n#user#0" />
+            <element signature="n#!!block;n#login#0;n#user#0" />
+            <element signature="n#!!block;n#addVerifyCode#0;n#user#0" />
+            <element signature="n#!!block;n#getUserOne#0;n#user#0" />
+            <element signature="n#!!block;n#getUserList#0;n#user#0" />
+          </folding>
         </state>
       </provider>
     </entry>
