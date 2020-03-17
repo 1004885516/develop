@@ -67,6 +67,9 @@ class user extends Controller{
   async addResidentr(){
     const {ctx} = this;
     const body = ctx.request.body.data;
+    if(!body){
+      return ctx.helper.returnerr({ctx, msg:'请确认参数'});
+    }
     const user = await ctx.service.resident.getOne({phone:body.openIde});
     if(user !== null){
       return ctx.helper.returnerr({ctx, msg:'该用户已注册'});
@@ -76,15 +79,25 @@ class user extends Controller{
     const result = await ctx.service.resident.add(body);
     ctx.helper.success({ ctx, res: result });
   }
-  // 验证居民是否注册
+  // 验证居民是否注册  type 0 未注册 1 未审核 2 已审核
   async verifyUser(){
     const {ctx} = this;
     const body = ctx.request.body;
-    const user = await ctx.service.resident.getOne({openid:body.openid});
-    if(user !== null){
-      return ctx.helper.returnerr({ctx, msg:'该用户已注册'});
+    let type = '';
+    if(!body.openid){
+      return ctx.helper.returnerr({ctx, msg:'openid是必须的'});
     }
-    ctx.helper.success({ ctx, res: user });
+    const user = await ctx.service.resident.getOne({openid:body.openid});
+    if(!user){
+      type = '0'
+    }else{
+      if(user.affirm === 'true'){
+        type = '1'
+      }else{
+        type = '2'
+      }
+    }
+    ctx.helper.success({ ctx, res: {type:type} });
   }
   // 管理员审核
   async affirmUser(){
