@@ -7,7 +7,6 @@ const fs = require('fs');
 /* formidable用于解析表单数据，特别是文件上传 */
 const formidable = require('formidable');
 const path = require('path');
-
 const pump= require('mz-modules/pump');
 
 class user extends Controller{
@@ -59,7 +58,7 @@ class user extends Controller{
   }
   // 获取全量小区
   async getAllEstate(){
-    const {ctx} = this
+    const {ctx} = thi
     const result = await ctx.service.estate.getList({});
     ctx.helper.success({ ctx, res: result });
   }
@@ -67,18 +66,34 @@ class user extends Controller{
   async addResidentr(){
     const {ctx} = this;
     const body = ctx.request.body.data;
-    if(!body){
-      return ctx.helper.returnerr({ctx, msg:'请确认参数'});
-    }
-    const user = await ctx.service.resident.getOne({phone:body.openIde});
-    if(user !== null){
-      return ctx.helper.returnerr({ctx, msg:'该用户已注册'});
-    }
-    body['outtime'] = new Date();     // 出行时间
-    body['times'] = 1;                // 出行次数
-    const result = await ctx.service.resident.add(body);
-    ctx.helper.success({ ctx, res: result });
-  }
+    let result = {};
+    // if(!body){
+    //   return ctx.helper.returnerr({ctx, msg:'请确认参数'});
+    // }
+    // const user = await ctx.service.resident.getOne({phone:body.openIde});
+    // if(user !== null){
+    //   return ctx.helper.returnerr({ctx, msg:'该用户已注册'});
+    // }
+    // body['outtime'] = new Date();     // 出行时间
+    // body['times'] = 1;                // 出行次数
+    // const result = await ctx.service.resident.add(body);
+    // console.log('req#######', ctx.req)
+
+
+    const stream = await ctx.getFileStream();
+    const fields = stream.fields;
+    let filename = stream.filename.split('.')[0] + path.extname(stream.filename).toLocaleLowerCase();
+    const suffix = stream.filename.split('.')[1];
+    // 上传图片的目录
+    let target = 'app/public/photo/' + fields.name + '.' + suffix;
+    let writeStream = fs.createWriteStream(target);
+    // 当使用标准的source.pipe(dest),   dest 就是 fs.createWriteStream操作
+    // 1.如果dest出现了error,source不会被销毁
+    // 2.而且你无法提供一个回调当pipe被销毁了
+    // pump就是解决上面的两个问题的
+    await pump(stream, writeStream);
+    ctx.helper.success({ ctx, res: {} });
+  };
   // 验证居民是否注册  type 0 未注册 1 未审核 2 已审核
   async verifyUser(){
     const {ctx} = this;

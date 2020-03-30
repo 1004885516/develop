@@ -10,10 +10,7 @@ module.exports = app => {
   router.post('/add', controller.detail.addNew);
 
 
-  router.get('/', controller.home.index);
-
-
-
+  router.get('/', controller.home.index)
 
   router.post('/addAdmin', controller.user.addAdmin);           // 添加管理员
   router.post('/setPwd', controller.user.setPwd);               // 设置管理员密码

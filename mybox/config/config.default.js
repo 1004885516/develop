@@ -28,7 +28,8 @@ module.exports = appInfo => {
   config.verify_codes = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ];
   config.token_key = 'asdrdcvtuhjerwsd13sd65rfg331235fgSDsd';
   config.mongoose = {
-    url: 'mongodb://47.92.118.197:27017/epidemic',
+    // url: 'mongodb://47.92.118.197:27017/epidemic',
+    url: 'mongodb://127.0.0.1:27017/epidemic',
     options: {
       autoReconnect: true,
       reconnectTries: Number.MAX_VALUE,
@@ -49,6 +50,6 @@ module.exports = appInfo => {
   };
   config.assets = {
     publicPath: '/public/',
-  }
+  };
   return config;
 };
